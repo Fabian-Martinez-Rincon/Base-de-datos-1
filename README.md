@@ -1,5 +1,13 @@
 # Base-de-datos-1
 
+- [Instalación del entorno](#instalación-del-entorno)
+- [Notas Clase 1](#notas-clase-1)
+- [Notas Clase 2](#notas-clase-2)
+
+---
+
+### Instalación del entorno
+
 Creamos el entorno
 
 ```
@@ -119,3 +127,47 @@ jupyter lab
 - [ ]  Redactar la semántica del modelo en lenguaje coloquial
 - [ ]  Aplicar las reglas para transformar el modelo E-R al modelo relacional
 - [ ]  Subir consultas al foro sobre el contenido de la clase
+
+---
+
+### Notas Clase 3
+
+#### Introducción al Álgebra Relacional
+
+El álgebra relacional funciona como un lenguaje procedimental de consultas y como un lenguaje de manipulación de datos. Como lenguaje de consulta, permite recuperar información mediante operaciones fundamentales y adicionales, mientras que como lenguaje de manipulación permite agregar, modificar y eliminar datos.
+
+#### Operaciones Fundamentales
+
+Las operaciones fundamentales son aquellas que no pueden reescribirse de otra manera:
+
+- **Selección**: Operación unaria que filtra tuplas según una condición, generando un subconjunto horizontal.
+- **Proyección**: Operación unaria que genera un subconjunto vertical al seleccionar solo ciertos atributos.
+- **Producto Cartesiano**: Operación binaria que relaciona cada tupla de una relación con todas las tuplas de otra relación.
+- **Renombre**: Operación unaria que permite cambiar el nombre de una relación o sus atributos.
+- **Unión**: Operación binaria que requiere unión compatible y combina tuplas de ambas relaciones sin repetidos.
+- **Diferencia**: Operación binaria que requiere unión compatible y obtiene tuplas que están en la primera relación pero no en la segunda.
+
+#### Operaciones Adicionales
+
+Estas operaciones pueden reescribirse usando las fundamentales, pero aportan legibilidad:
+
+- **Intersección**: Devuelve tuplas comunes entre dos relaciones con unión compatible.
+- **Producto Theta (Θ)**: Genera tuplas aplicando una condición sobre el producto cartesiano, manteniendo columnas duplicadas.
+- **Producto Natural**: Similar al producto theta pero elimina columnas duplicadas.
+- **División**: Opera con un dividendo y un divisor, buscando tuplas que se relacionen con todas las tuplas del divisor.
+- **Asignación**: Permite modularizar consultas complejas asignando resultados intermedios a relaciones temporales.
+
+#### Operaciones de Manipulación
+
+Estas operaciones modifican la cantidad o valores de tuplas:
+
+- **Inserción**: Agrega una o varias tuplas a una relación, ya sea especificadas directamente o como resultado de otra consulta.
+- **Eliminación**: Elimina tuplas que cumplan ciertas condiciones o que estén explícitamente especificadas.
+- **Actualización**: Modifica valores de atributos en tuplas específicas o en toda la relación.
+
+#### Mejores Prácticas
+
+- **Modularidad**: Para consultas complejas, es recomendable utilizar la asignación para trabajar por pasos.
+- **Legibilidad**: Evitar anidar muchas operaciones con paréntesis que dificulten la comprensión.
+- **Notación lineal**: Las consultas se escriben e interpretan de izquierda a derecha.
+- **Desambiguación**: Usar notación puntual para distinguir atributos con el mismo nombre en diferentes relaciones.
