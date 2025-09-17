@@ -73,3 +73,49 @@ jupyter lab
 - Los materiales presentados son solo un resumen de los conceptos
 - Estudiantes deben consultar la bibliografía para profundizar
 - Se espera participación activa:
+
+--
+
+### Notas Clase 2
+
+#### Conceptos del Modelo Relacional
+
+- El modelo relacional representa datos como **tablas bidimensionales** llamadas relaciones
+- Elementos principales:
+    - **Relaciones (tablas)**: Estructuras bidimensionales que almacenan datos
+    - **Atributos**: Columnas de las tablas que representan propiedades
+    - **Esquema**: Nombre de la relación + conjunto de atributos (sin orden preestablecido)
+    - **Tuplas**: Filas de cada relación que contienen valores concretos
+    - **Dominio**: Cada componente debe ser atómico (no compuesto)
+    - **Clave**: Conjunto de atributos que no permite valores repetidos
+
+#### Reglas de Transformación 1 a 1 (E-R a Relacional)
+
+- Transformación de entidades:
+    - Crear una relación con el mismo nombre y atributos
+    - La clave en el modelo relacional corresponde al identificador de la entidad
+- Transformación de relaciones:
+    - Crear una relación con el mismo nombre
+    - Incluir como atributos los identificadores de las entidades participantes
+    - Agregar los atributos propios de la relación
+    - La clave depende de la cardinalidad
+
+#### Casos Especiales de Transformación
+
+- **Relaciones con roles**: Renombrar atributos cuando una entidad participa más de una vez
+    - Ejemplo: Empleado-Director donde se renombra "número de empleado" a "número de director"
+- **Generalización**: Tres opciones de transformación
+    1. Solo transformar la entidad de nivel superior (agregando atributo discriminante)
+    2. Solo transformar las entidades de nivel inferior (repitiendo atributos comunes)
+    3. Transformar todas las entidades (nivel superior e inferior)
+- **Especialización**: Dos opciones de transformación
+    1. Solo transformar la entidad de nivel superior (con atributo discriminante)
+    2. Transformar todas las entidades (nivel superior e inferior)
+- **Agregación**: Transformar entidades y relaciones participantes, y la relación con la agregación
+
+#### Actividades para la próxima clase
+
+- [ ]  Interpretar el modelo de entidades y relaciones presentado
+- [ ]  Redactar la semántica del modelo en lenguaje coloquial
+- [ ]  Aplicar las reglas para transformar el modelo E-R al modelo relacional
+- [ ]  Subir consultas al foro sobre el contenido de la clase
